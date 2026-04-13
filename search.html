@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>search working</title>
+  <link rel="stylesheet" href="search.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">MOTO <span>REVONA</span></div>
+  <form onsubmit="return false;">
+    <input type="text" name="" placeholder="   what do you want ?" id="myinput">
+    <input type="submit" value="search">
+  </form>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="CONTACT.HTML">CONTACT</a>
+        <a href="about.html">ABOUT</a>
+    </nav>
+</header>
+
+<div class="container">
+
+  <div class="bike-card">
+     <a href="SUZUKU.HTML">
+    <div class="tag">Popular</div>
+    <img   src="h6.avif">
+    <div  class="bike-info"><h3>Suzuki Hayabusa</h3></div>
+    </a>
+  </div>
+
+  <div class="bike-card">
+     <a href="s1000.html">
+      <div class="tag">Classic</div>
+    <img src="s1000.avif">
+    <div class="bike-info"><h3>BMW S1000RR</h3></div>
+    </a>
+  </div>
+
+  <div class="bike-card">
+     <a href="ducati.html">
+    <img src="st1.avif">
+    <div class="bike-info"><h3>Ducati Streetfighter V4</h3></div>
+    </a>
+  </div>
+
+  <div class="bike-card">
+    <a href="ninja.html">
+    <img src="ninja-zx-10r-right-side-view-2.avif">
+    <div class="bike-info"><h3>Kawasaki Ninja ZX10R</h3></div>
+    </a>
+  </div>
+
+  <div class="bike-card">
+     <a href="sporster.html">
+    <img src="sportster-s-right-side-view-15.avif">
+    <div class="bike-info"><h3>Harley-davidson sportster S</h3></div>
+    </a>
+  </div>
+
+  <div class="bike-card">
+  <a href="KTM.html">
+    <div class="tag">Super</div>
+    <img src="super duke logo.avif">
+    <div class="bike-info"><h3>KTM 1390 Super Duke R</h3></div>
+  </a>
+</div>
+
+  <div class="bike-card">
+        <a href="1300gs.html">
+    <img src="bmw gs logo.avif">
+    <div class="bike-info"><h3>BMW R 1300 GS</h3></div>
+    </a>
+  </div>
+
+  <div class="bike-card">
+    <a href="gt.html">
+    <div class="tag">top</div>
+    <img src="gt logo.avif">
+    <div class="bike-info"><h3>GT 650</h3></div>
+    </a>
+  </div>
+
+  <div class="bike-card">
+    <a href="ns400.html">
+          <img src="ns logo.avif">
+    <div class="bike-info"><h3>Bajaj Pulsar NS400Z</h3></div>
+    </a>
+  </div>
+
+  <div class="bike-card">
+    <a href="z900.html">
+    <img src="z900 logo.avif">
+    <div class="bike-info"><h3>Kawasaki Z900</h3></div>
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Moto Revona. All Rights Reserved.</p>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+  $("#myinput").on("keyup", function(){
+    var value = $(this).val().toLowerCase();
+
+    $(".bike-card").each(function(){
+      var text = $(this).find("h3").text().toLowerCase();
+
+      if(text.indexOf(value) > -1){
+        $(this).css("display", "");  
+      } else {
+        $(this).css("display", "none"); 
+      }
+    });
+
+  });
+
+});
+</script>
+</body>
+</html>
